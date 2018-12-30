@@ -50,7 +50,7 @@ public class DataBaseActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if (v.getId() == R.id.btnAdd){
             addDevice();
-        }else if (v.getId() == R.id.btnAdd){
+        }else if (v.getId() == R.id.btnShow){
             getAllDevices();
         }
     }
@@ -59,9 +59,7 @@ public class DataBaseActivity extends AppCompatActivity implements View.OnClickL
         String deviceId = etDeviceId.getText().toString();
         String deviceName = etDeviceName.getText().toString();
         if (!(TextUtils.isEmpty(deviceId))  && !(TextUtils.isEmpty(deviceName))){
-            device.setDeviceId(deviceId);
-            device.setDevicename(deviceName);
-            dataBaseHelper.insertDeviceName(device);
+            dataBaseHelper.insertDeviceName(new Devices(deviceName,deviceId));
         }else{
             Toast.makeText(this, "Invalid Fields", Toast.LENGTH_SHORT).show();
         }

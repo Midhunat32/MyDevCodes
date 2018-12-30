@@ -27,10 +27,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-        String query = "create table "+TABLE_SAMPLE+"(id int primary key autoincrement," +
+        String query = "create table "+TABLE_SAMPLE+"( "+" id INTEGER primary key autoincrement," +
                 ""+COLUMN_DEVICE_ID+" text not null unique,"+COLUMN_DEVICE_NAME+" text)";
-        db.execSQL(query);
+         db.execSQL(query);
     }
 
     @Override
