@@ -3,5 +3,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="sample">Esaya Software (india) Private Limited is a Private incorporated on 15 June 2004. It is classified as Non-govt company and is registered at Registrar of Companies, Mumbai. Its authorized share capital is Rs. 2,500,000 and its paid up capital is Rs. 2,100,000. It is inolved in Software publishing, consultancy and supply [Software publishing includes production, supply and documentation of ready-made (non-customized) software, operating systems software, business and other applications software, computer games software for all platforms. Consultancy includes providing the best solution in the form of custom software after analyzing the user</string>
+    <string name="sample">Esaya Software (india) Private Limited is a Private incorporated on 15 June 2004. It is
+        classified as Non-govt company and is registered at Registrar of Companies, Mumbai. Its authorized share capital
+        is Rs. 2,500,000 and its paid up capital is Rs. 2,100,000. It is inolved in Software publishing, consultancy and
+        supply [Software publishing includes production, supply and documentation of ready-made (non-customized)
+        software, operating systems software, business and other applications software, computer games software for all
+        platforms. Consultancy includes providing the best solution in the form of custom software after analyzing the
+        user
+    </string>
 </resources>

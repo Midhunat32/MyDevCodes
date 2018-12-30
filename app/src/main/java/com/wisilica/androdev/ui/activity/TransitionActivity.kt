@@ -21,11 +21,7 @@ class TransitionActivity : AppCompatActivity() {
         var cons2 =  ConstraintSet()
         cons2.clone(this,R.layout.activity_home_large)
         cons1.clone(constraintlayoutmain)
-
         btnChange.setOnClickListener{
-
-
-
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 TransitionManager.beginDelayedTransition(constraintlayoutmain)
                 val constraint = if(set) cons1 else cons2
@@ -33,7 +29,6 @@ class TransitionActivity : AppCompatActivity() {
                 set = !set
 
             }
-
         }
 
     }
