@@ -31,7 +31,7 @@ class DetailFragment : BaseFragment(),Utils.recyclerClickListener {
     fun setRecyclerAdapter() {
         recyclerView.layoutManager = LinearLayoutManager(activity)
         recyclerView.hasFixedSize()
-     //   RecyclerAdapter().setData(getDataList(),this)
+     //   RecyclerAdapterDevice().setData(getDataList(),this)
         recyclerView.adapter = RecyclerAdapter(getDataList(),this)
 
     }

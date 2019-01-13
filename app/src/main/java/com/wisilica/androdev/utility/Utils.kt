@@ -11,4 +11,10 @@ public class Utils{
         fun onItemClick(view: View,position:Int,obj:Any?)
     }
 
+    interface dbListener{
+        fun dbInsertionSuccess();
+        fun dbInsertionFailed();
+        fun dbFetchFailed();
+    }
+
 }

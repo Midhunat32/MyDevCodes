@@ -5,8 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +35,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void insertDeviceName(Devices devices){
+    public void insertDeviceName(DevicesLite devices){
         sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_DEVICE_ID,devices.getDeviceId());
@@ -47,18 +45,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public List<Devices> readAllDevices(){
+    public List<DevicesLite> readAllDevices(){
         sqLiteDatabase = this.getReadableDatabase();
         String query = "select * FROM "+TABLE_SAMPLE;
         Cursor cursor =  sqLiteDatabase.rawQuery(query,null);
-        List<Devices>devicesList =new ArrayList<>();
+        List<DevicesLite>devicesList =new ArrayList<>();
         if (cursor.moveToFirst()){
             String deviceId,deviceName;
-            Devices devices;
+            DevicesLite devices;
             do {
                  deviceId = cursor.getString(1);
                  deviceName = cursor.getString(2);
-                 devices = new Devices(deviceName,deviceId);
+                 devices = new DevicesLite(deviceName,deviceId);
                  devicesList.add(devices);
 
             }while(cursor.moveToNext());

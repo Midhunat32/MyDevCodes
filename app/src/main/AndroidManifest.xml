@@ -14,12 +14,16 @@
         <activity android:name=".ui.activity.TransitionActivity">
         </activity>
         <activity android:name=".ui.activity.dqlite_db.DataBaseActivity">
+        </activity>
+        <activity android:name=".ui.activity.JavaTest.Animal">
+        </activity>
+        <activity android:name=".ui.activity.room.RoomActivity"
+                  android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
         </activity>
     </application>
 

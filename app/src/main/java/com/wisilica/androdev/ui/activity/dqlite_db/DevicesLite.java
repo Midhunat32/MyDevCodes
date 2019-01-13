@@ -1,10 +1,10 @@
 package com.wisilica.androdev.ui.activity.dqlite_db;
 
-public class Devices {
+public class DevicesLite {
     String devicename;
     String deviceId;
 
-    public Devices(String devicename, String deviceId) {
+    public DevicesLite(String devicename, String deviceId) {
         this.devicename = devicename;
         this.deviceId = deviceId;
     }
