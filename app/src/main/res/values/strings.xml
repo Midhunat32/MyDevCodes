@@ -11,4 +11,9 @@
         platforms. Consultancy includes providing the best solution in the form of custom software after analyzing the
         user
     </string>
+
+    <string name="facebookapp_id">377017296425706</string>
+    <string name="facebook_login_protocol">fb377017296425706</string>
+
+
 </resources>

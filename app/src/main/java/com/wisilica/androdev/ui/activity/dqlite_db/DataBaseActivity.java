@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.wisilica.androdev.R;
+import com.wisilica.androdev.ui.activity.room.Devices;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataBaseActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,8 +29,6 @@ public class DataBaseActivity extends AppCompatActivity implements View.OnClickL
         initUi();
         registerListenrs();
         Second.newInstance();
-
-
     }
 
     private void initObjects(){
