@@ -9,10 +9,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.AnimationsSample.AnimationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
 
         <meta-data
                 android:name="com.google.firebase.messaging.default_notification_color"
                 android:resource="@color/colorAccent"/>
+
         <service
                 android:name=".ui.activity.Firebase.MessageServices"
                 android:enabled="true"
@@ -34,18 +43,12 @@
         <activity android:name=".ui.activity.Firebase.FireBaseActivity">
         </activity>
         <activity android:name=".ui.activity.FbAuthentication.FbLogin">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-
         </activity>
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-        android:value="@string/facebookapp_id">
 
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebookapp_id">
         </meta-data>
-
     </application>
 
 </manifest>

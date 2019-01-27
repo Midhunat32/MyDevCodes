@@ -7,14 +7,11 @@ import android.content.pm.Signature
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.annotation.RequiresApi
 import android.util.Base64
 import android.util.Log
 import com.facebook.*
-import com.facebook.login.Login
 import com.facebook.login.LoginResult
 import com.wisilica.androdev.R
-import com.wisilica.androdev.ui.activity.room.Devices
 import kotlinx.android.synthetic.main.activity_fb_login.*
 import java.security.MessageDigest
 import java.util.*
@@ -31,21 +28,22 @@ class FbLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fb_login)
 
+
         callBack = CallbackManager.Factory.create()
+
         if (AccessToken.getCurrentAccessToken()!=null){
             tvuserName.text=AccessToken.getCurrentAccessToken().source.name
-
         }
 
+        btnFb.setOnClickListener{
 
-        LoginManager.getInstance().logInWithReadPermissions(this,
-            Arrays.asList("public_profile","email", "user_birthday", "user_friends"));
-//        btnFb.setPublishPermissions(Arrays.asList("public_profile","email"))
-        btnFb.registerCallback(callBack, object : FacebookCallback<LoginResult> {
+            btnFb.registerCallback(callBack, object : FacebookCallback<LoginResult> {
                 override fun onCancel() {
+
                 }
 
                 override fun onError(error: FacebookException?) {
+
                 }
 
                 override fun onSuccess(result: LoginResult?) {
@@ -65,13 +63,13 @@ class FbLogin : AppCompatActivity() {
                     request.parameters=parameters
                     request.executeAsync()
 
-
-
-
                 }
             })
 
+        }
 
+        LoginManager.getInstance().logInWithReadPermissions(this,
+            Arrays.asList("public_profile","email", "user_birthday", "user_friends"));
     }
 
     private fun getData(objectfb: JSONObject?) {
