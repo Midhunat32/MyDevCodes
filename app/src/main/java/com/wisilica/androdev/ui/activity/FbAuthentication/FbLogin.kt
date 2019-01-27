@@ -39,7 +39,7 @@ class FbLogin : AppCompatActivity() {
 
 
         LoginManager.getInstance().logInWithReadPermissions(this,
-            Arrays.asList("public_profile","email","email", "user_birthday", "user_friends"));
+            Arrays.asList("public_profile","email", "user_birthday", "user_friends"));
 //        btnFb.setPublishPermissions(Arrays.asList("public_profile","email"))
         btnFb.registerCallback(callBack, object : FacebookCallback<LoginResult> {
                 override fun onCancel() {
@@ -58,12 +58,10 @@ class FbLogin : AppCompatActivity() {
                             override fun onCompleted(`objectfb`: JSONObject?, response: GraphResponse?) {
                                 progress.dismiss()
                                 getData(objectfb)
-
-
                             }
                         })
                     var parameters:Bundle= Bundle();
-                    parameters.putString("public_profile","email")
+                    parameters.putString("fields", "id,name,email,birthday");
                     request.parameters=parameters
                     request.executeAsync()
 
@@ -78,8 +76,8 @@ class FbLogin : AppCompatActivity() {
 
     private fun getData(objectfb: JSONObject?) {
         var userName = objectfb?.get("name")
-       // var email = objectfb?.get("email")
-        //tvEmail.text=email.toString()
+        var email = objectfb?.get("email")
+        tvEmail.text=email.toString()
         tvuserName.text=userName.toString()
     }
 
