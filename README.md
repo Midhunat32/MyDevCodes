@@ -1,2 +1,2 @@
 # MyDevCodes
-For Learning purposes
+For Learning purpose
