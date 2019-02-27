@@ -50,6 +50,7 @@ dependencies {
     // Lifecycle components
     implementation "android.arch.lifecycle:extensions:${rootProject.ext.archLifecycleVersion}"
     annotationProcessor "android.arch.lifecycle:compiler:${rootProject.ext.archLifecycleVersion}"
+    implementation 'com.airbnb.android:lottie:2.5.0'
 
 
 }
