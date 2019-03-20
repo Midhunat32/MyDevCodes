@@ -24,8 +24,6 @@ public class FallDownAnimationActivity extends AppCompatActivity {
         constrainLearn = findViewById(R.id.constrainLearn);
         constrainLearnSide = findViewById(R.id.constrainLearnSide);
         cl_main = findViewById(R.id.cl_main);
-
-
         constrainLearnMain.setVisibility(View.INVISIBLE);
         constrainLearnSide.setVisibility(View.INVISIBLE);
 
@@ -42,9 +40,6 @@ public class FallDownAnimationActivity extends AppCompatActivity {
             @Override
             public void onGlobalLayout() {
                 constrainLearnMain.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-//                endX[0] = constrainLearnMain.getMeasuredWidth();
-//                endY[0] = constrainLearnMain.getMeasuredHeight();
-              //  AnimationUtil.fallingDownAnimation(constrainLearnMain, constrainLearn, 1000);
                 AnimationUtil.horizontalMoveAnimation(constrainLearnSide, constrainLearn, 1000,AnimationUtil.LEFT);
             }
         });
