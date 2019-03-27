@@ -52,6 +52,7 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:${rootProject.ext.archLifecycleVersion}"
     implementation 'com.airbnb.android:lottie:2.5.0'
     implementation 'com.nightonke:wowoviewpager:2.0.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
 
 
 }

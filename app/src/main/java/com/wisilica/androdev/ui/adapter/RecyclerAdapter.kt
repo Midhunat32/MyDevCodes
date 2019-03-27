@@ -21,15 +21,13 @@ class RecyclerAdapter(list2: ArrayList<String>,listener2: Utils.recyclerClickLis
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
         p0.tvItemName.text= lists[p1]
-
         p0.tvItemName.setOnClickListener{
             listener?.onItemClick(p0.tvItemName,p1,lists?.get(p1))
         }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvItemName:TextView=itemView.findViewById(R.id.tvItemName)
-
+        val tvItemName:TextView=itemView.findViewById(R.id.tvText)
     }
 
 }
