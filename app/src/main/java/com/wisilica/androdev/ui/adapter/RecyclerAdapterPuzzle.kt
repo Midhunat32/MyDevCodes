@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.wisilica.androdev.R
 import com.wisilica.androdev.model.Words
-import android.support.v7.widget.GridLayoutManager
 
 class RecyclerAdapterPuzzle(list:MutableList<Words>) :RecyclerView.Adapter<RecyclerAdapterPuzzle.ViewHolder>(){
     var list = list
@@ -19,18 +18,13 @@ class RecyclerAdapterPuzzle(list:MutableList<Words>) :RecyclerView.Adapter<Recyc
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvText: TextView =itemView.findViewById(R.id.tvText)
-//        val recyclerView = itemView.getParent() as RecyclerView
-//        val gridLayoutManager = recyclerView.layoutManager as GridLayoutManager?
-//        val spanSize = gridLayoutManager!!.spanSizeLookup.getSpanSize(getLayoutPosition())
     }
 
     override fun onBindViewHolder(p0: ViewHolder, position: Int) {
         p0.tvText.text= list.get(position).letter
-
     }
 
     override fun getItemCount(): Int {
         return  list?.size
     }
-
 }
