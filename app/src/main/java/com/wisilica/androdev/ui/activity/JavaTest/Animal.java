@@ -2,8 +2,11 @@ package com.wisilica.androdev.ui.activity.JavaTest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import com.wisilica.androdev.R;
+import com.wisilica.androdev.ui.activity.tablayout.PagerData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Animal extends AppCompatActivity {
 
@@ -13,6 +16,7 @@ public class Animal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_test);
 
+        List<PagerData>list = new ArrayList<PagerData>();
 
         Animal animal = new Dog();
         animal.sound();

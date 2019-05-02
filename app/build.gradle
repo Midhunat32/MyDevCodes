@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
 
 
 android {
@@ -25,6 +26,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
     }
 }
 
@@ -58,10 +62,12 @@ dependencies {
     implementation 'com.airbnb.android:lottie:2.5.0'
     implementation 'com.nightonke:wowoviewpager:2.0.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
-
-//    compile 'com.google.android.exoplayer:exoplayer:2.9.6'
-
     implementation 'com.google.android.exoplayer:exoplayer:2.8.1'
+
+    //Data binding
+    implementation 'android.arch.lifecycle:runtime:' + rootProject.arch
+    //implementation 'android.arch.lifecycle:extensions:1.1.1'
+    //annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.arch
 
 
 }

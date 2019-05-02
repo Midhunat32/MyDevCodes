@@ -9,12 +9,16 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.Data.DataActivity">
+        <activity android:name=".ui.activity.observer_pattern.ObserverPatternActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.tablayout.TabSampleActivity">
+        </activity>
+        <activity android:name=".ui.activity.Data.DataActivity">
         </activity>
         <activity android:name=".ui.activity.ThreadpoolExecutor.ThreadPool">
         </activity>
