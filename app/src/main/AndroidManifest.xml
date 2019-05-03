@@ -16,9 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".ui.activity.tablayout.TabSampleActivity">
         </activity>
+
         <activity android:name=".ui.activity.Data.DataActivity">
+
         </activity>
         <activity android:name=".ui.activity.ThreadpoolExecutor.ThreadPool">
         </activity>
